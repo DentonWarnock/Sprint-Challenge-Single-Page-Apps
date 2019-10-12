@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import CharacterCard from "./CharacterCard";
+import SearchForm from "./SearchForm.js";
 
 export default function CharacterList() {
   const [data, setData] = useState([]);
@@ -18,20 +19,26 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <section className="character-list grid-view">
-      {data.map(char => {
-        return (
-          <CharacterCard 
-            key={char.id}
-            image={char.image}
-            name={char.name}
-            species={char.species}
-            gender={char.gender}
-            status={char.status}
-          />
-        )        
-      })
-    }
-    </section>
+    <div>
+      <div>
+        <SearchForm namesList={data.names} />
+      </div>
+      
+      <section className="character-list grid-view">
+        {data.map(char => {
+          return (
+            <CharacterCard 
+              key={char.id}
+              image={char.image}
+              name={char.name}
+              species={char.species}
+              gender={char.gender}
+              status={char.status}
+            />
+          )        
+        })
+      }
+      </section>
+    </div>
   );
 }

@@ -18,7 +18,7 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <section className="character-list">
+    <section className="character-list grid-view">
       {data.map(char => {
         return (
           <CharacterCard 
@@ -26,7 +26,8 @@ export default function CharacterList() {
             image={char.image}
             name={char.name}
             species={char.species}
-            location={char.location}
+            gender={char.gender}
+            status={char.status}
           />
         )        
       })

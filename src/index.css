@@ -37,3 +37,19 @@ main {
 header h1 {
   text-align: center;
 }
+
+.search-form {
+  margin-bottom: 10px;
+}
+
+.character-list .grid-view {
+  margin-top: 10px;
+}
+
+button {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem auto;
+  text-align: center;
+  display: inline-block;
+}

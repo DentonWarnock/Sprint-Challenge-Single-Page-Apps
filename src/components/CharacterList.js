@@ -19,11 +19,12 @@ export default function CharacterList() {
   }, []);
 
   return (
-    <div>
+    <div className="cards-container">
       <div>
-        <SearchForm namesList={data.names} />
-      </div>
-      
+        <SearchForm List={data} />
+      </div><br></br>
+      <br></br>
+      <br></br>      
       <section className="character-list grid-view">
         {data.map(char => {
           return (

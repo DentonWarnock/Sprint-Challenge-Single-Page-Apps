@@ -1,21 +1,6 @@
 import React from "react";
-import styled from 'styled-components';
+import { StyledCharCard } from '../Styles.js';
 
-export const StyledCharCard = styled.div`
-  border: 1px solid black;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin: 0.5rem;
-  text-align: center;
-  
-  img {
-    border-radius: 0.5rem;
-  }
-
-  span {
-    color: red;
-  }
-`
 
 export default function CharacterCard(props) {
   return (

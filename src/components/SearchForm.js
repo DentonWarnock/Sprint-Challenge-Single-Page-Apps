@@ -1,25 +1,7 @@
 import React, { useState } from "react";
-import styled from 'styled-components';
+import { StyledForm } from '../Styles.js';
 import CharacterCard from "./CharacterCard";
 
-const StyledForm = styled.form`
-  text-align: center;
-  height: 2rem;
-  margin-bottom: 2rem;
-
-  input {
-    width: 25rem;
-    height: 4rem;
-    margin: 1rem;
-    font-size: 1rem;
-  } 
-
-  button {
-    width: 5rem;
-    height: 5rem;
-    margin: 1rem;
-  }
-`
 
 export default function SearchForm(props) {
   const [name, setName] = useState("")
